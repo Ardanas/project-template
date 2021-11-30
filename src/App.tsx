@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import { Button, DatePicker } from 'antd';
 import './App.less';
+import Style from './App.module.less';
+import ExchangeRates from './components/ExchangeRates';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <DatePicker />
-      <header className="App-header">
+    <div className={Style.appContainer}>
+      <ExchangeRates />
+      <header className={Style.appHeader}>
         <p className="color-red">Hello Vite + React!</p>
+        <DatePicker />
         <p>
           <Button type="primary" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
