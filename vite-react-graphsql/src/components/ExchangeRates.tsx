@@ -9,7 +9,7 @@ function ExchangeRates() {
   if (error) return <p>Error :(</p>;
 
   return data.rates.slice(0, 10).map(({ currency, rate }) => (
-    <div key={currency}>
+    <div key={currency} style={{ background: 'skyblue' }}>
       <p>
         {currency}: {rate}
       </p>
